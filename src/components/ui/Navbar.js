@@ -13,6 +13,11 @@ export const Navbar = () => {
 			</NavLink>
 		</li>
 	) : (
+		<>
+        <li className="nav-item">
+			<NavLink to= "/projects" className="nav-link">Projects</NavLink>
+		</li>
+
 		<li className="nav-item dropdown with-arrow">
 			<button className="nav-link" data-toggle="dropdown" id="nav-link-dropdown-toggle">
 				{displayOrUsername(user)}
@@ -38,6 +43,7 @@ export const Navbar = () => {
 				</div>
 			</div>
 		</li>
+	</>
 	);
 
 	return (

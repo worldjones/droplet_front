@@ -1,5 +1,6 @@
 import { AdminDashboard } from "../pages/admin/AdminDashboard";
 import { SignIn, SignUp } from "../pages/Authentication";
+import { Projects } from "../pages/Projects";
 import { Settings } from "../pages/user/Settings";
 import { Welcome } from "../pages/Welcome";
 
@@ -32,6 +33,11 @@ export const routes = [
 		protected: true,
 		component: Settings,
 	},
+    {
+	path: "/projects",
+		protected: true,
+		component: Projects,
+	},
 	/**
 	 *
 	 * Admin routes.
@@ -43,4 +49,10 @@ export const routes = [
 		admin: true,
 		component: AdminDashboard,
 	},
+    {
+		path: "/projects",
+		protected: true,
+		component: Projects,
+	 },
+
 ];

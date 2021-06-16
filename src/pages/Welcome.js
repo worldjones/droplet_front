@@ -2,8 +2,8 @@ export const Welcome = () => {
 	return (
 		<div className="container">
 			<div className="content">
-				<h1>Hello World.</h1>
-				<p>This is the start of your project.</p>
+				<h1>Hello</h1>
+				<p>Welcome to worldjones.dk</p>
 			</div>
 		</div>
 	);
