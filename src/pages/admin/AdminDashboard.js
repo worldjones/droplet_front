@@ -75,9 +75,56 @@ export const AdminDashboard = () => {
 
 
 	return (
+
+
+
 		<div className="container">
+
+
+			<div className="container-fluid">
+				<div className="row">
+					<div className="col-xl-6">
+						<h2>Create new Project</h2>
+						<form onChange={handleChange1} onSubmit={handleSubmit1} className="w-400 mw-full">
+							<div className="form-group">
+								<label htmlFor="projectname" className="required">
+									Project Name
+								</label>
+								<input type="text" className="form-control" id="projectname" name="projectname" placeholder="Project Name" required="required" />
+							</div>
+							<div className="form-group">
+								<label htmlFor="projectdescription" className="required">
+									Project Description
+								</label>
+								<input type="text" name="projectdescription" className="form-control" id="projectdescription" placeholder="Project Description" required="required" />
+							</div>
+							<input className="btn btn-primary btn-block" type="submit" value="Create project" />
+						</form>
+					</div>
+					<div className="col-xl-6">
+						<h2>Add User to Project</h2>
+						<form onChange={handleChange2} onSubmit={handleSubmit2} className="w-400 mw-full">
+							<div className="form-group">
+								<label htmlFor="projectid" className="required">
+									Project ID
+								</label>
+								<input type="number" className="form-control" id="projectid" name="projectid" placeholder="Project ID" required="required" />
+							</div>
+							<div className="form-group">
+								<label htmlFor="userid" className="required">
+									User ID
+								</label>
+								<input type="number" className="form-control" id="userid" name="userid" placeholder="User ID" required="required" />
+							</div>
+							<input className="btn btn-primary btn-block" type="submit" value="Add User" />
+						</form>
+					</div>
+				</div>
+			</div>
+
+
 			<div className="content">
-				<h1>Dashboard</h1>
+				<h1></h1>
 				<section>
 					<h2>Projects</h2>
 					<p>Displaying all ({projects.length}) projects.</p>
@@ -125,46 +172,7 @@ export const AdminDashboard = () => {
 						</tbody>
 					</table>
 				</section>
-				<div className="container-fluid">
-					<div className="row">
-						<div className="col-xl-6">
-							<h2>Create new Project</h2>
-							<form onChange={handleChange1} onSubmit={handleSubmit1} className="w-400 mw-full">
-								<div className="form-group">
-									<label htmlFor="projectname" className="required">
-										Project Name
-									</label>
-									<input type="text" className="form-control" id="projectname" name="projectname" placeholder="Project Name" required="required" />
-								</div>
-								<div className="form-group">
-									<label htmlFor="projectdescription" className="required">
-										Project Description
-									</label>
-									<input type="text" name="projectdescription" className="form-control" id="projectdescription" placeholder="Project Description" required="required" />
-								</div>
-								<input className="btn btn-primary btn-block" type="submit" value="Create project" />
-							</form>
-						</div>
-						<div className="col-xl-6">
-							<h2>Add User to Project</h2>
-							<form onChange={handleChange2} onSubmit={handleSubmit2} className="w-400 mw-full">
-								<div className="form-group">
-									<label htmlFor="projectid" className="required">
-										Project ID
-									</label>
-									<input type="number" className="form-control" id="projectid" name="projectid" placeholder="Project ID" required="required" />
-								</div>
-								<div className="form-group">
-									<label htmlFor="userid" className="required">
-										User ID
-									</label>
-									<input type="number" className="form-control" id="userid" name="userid" placeholder="User ID" required="required" />
-								</div>
-								<input className="btn btn-primary btn-block" type="submit" value="Add User" />
-							</form>
-						</div>
-					</div>
-				</div>
+
 			</div>
 		</div>
 	);
